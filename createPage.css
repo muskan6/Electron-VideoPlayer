@@ -1,0 +1,48 @@
+body{
+    background: rgb(27, 26, 31);
+}
+.header{
+    height: 6%;
+    min-height: 30px;
+    position: fixed;
+    width: 100%;
+}
+#profile{
+    font-size: 18px;
+    float: right;
+    padding-right: 5%;
+    display: flex;
+    padding-top: 0.3%;
+}
+#profileImg{
+    padding-left: 15px;
+}
+#home{
+    float: right;
+    font-size: 18px;
+    padding-right: 2%;
+    padding-top: 0.3%;
+}
+a{
+    color: white;
+}
+.carousel{
+    height: 300px !important;
+}
+.playlist-div{
+    text-align: -webkit-center;
+    display: none;
+}
+.maindiv{
+    padding-top: 6%;
+}
+#trending{
+    display: block;
+}
+.playlistContent{
+    display: table-caption;
+    align-content: center;
+}
+audio{
+    height: 5vh;
+}

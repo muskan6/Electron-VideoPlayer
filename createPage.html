@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            create musically
+        </title>
+        <link href=" https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="createPage.css">
+    </head>
+    <body>
+        <div class="header nav-wrapper black z-depth-3">
+            <a href="profile.html" id="profile">
+                Profile
+                <div id="profileImg">
+                    <i class="material-icons small">account_circle</i>
+                </div>
+            </a>
+            <a href="mainPage.html" id="home">
+                Home
+            </a>
+        </div>
+        <div class="maindiv">
+            <div class="carousel">
+                <a class="carousel-item" href="#one!"><img src="./images/trending.png" class="links active" onclick="openTab(event, 'trending')"><div class="center-align">Trending</div></a>
+                <a class="carousel-item" href="#two!"><img src="./images/friendship.png" class="links" onclick="openTab(event, 'friendship')"><div class="center-align">Friendship</div></a>
+                <a class="carousel-item" href="#three!"><img src="./images/international.png" class="links" onclick="openTab(event, 'international')"><div class="center-align">International</div></a>
+                <a class="carousel-item" href="#four!"><img src="./images/others.png" class="links" onclick="openTab(event, 'others')"><div class="center-align">Others</div></a>
+                <a class="carousel-item" href="#five!"><img src="./images/romantic.png" class="links" onclick="openTab(event, 'romantic')"><div class="center-align">Romantic</div></a>
+            </div>
+            <div id="trending" class="playlist-div">
+                <div class="playlistContent">
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+            <div id="friendship" class="playlist-div">
+                <div class="playlistContent">
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+            <div id="international" class="playlist-div">
+                <div class="playlistContent">
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+            <div id="others" class="playlist-div">
+                <div class="playlistContent">
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+            <div id="romantic" class="playlist-div">
+                <div class="playlistContent">
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                    <audio controls>
+                        <source src="horse.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.carousel');
+                var options = {}
+                var instances = M.Carousel.init(elems, options);
+            });
+            function openTab(e, tabName) {
+                var tabcontent = document.getElementsByClassName("playlist-div");
+                console.log(tabcontent.length)
+                for (var i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                var tablinks = document.getElementsByClassName("links");
+                for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "block";
+                e.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+</html>
